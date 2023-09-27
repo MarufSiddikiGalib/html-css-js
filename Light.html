@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+</head>
+<body class="bulb">
+
+    <img id="img1" src="img bulb/turn off.jpg" alt="">
+    <button id="btn">Turn on</button>
+    <style>
+         .bulb{
+            background-color: black;
+            
+         }
+         #img1{
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 420px;
+         }
+         #btn{
+
+            background-color: #2edd1e; /* Green */
+            border: 2px solid rgb(16, 170, 36);
+            background: #2edd1e;
+            padding: 3px 100px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 2px rgb(94, 54, 206)
+
+          }
+             
+    </style>
+
+    <script>
+       let Btn = document.getElementById("btn");
+       let img1 = document.getElementById("img1");
+       Btn.addEventListener('click', turnOn)
+
+       function turnOn(event){
+        if(btn.textContent.includes("on")){
+            img1.src="img bulb/turn on.jpg"
+            btn.textContent = "Turn off"
+        }
+
+        else if(btn.textContent.includes("off")){
+            img1.src="img bulb/turn off.jpg"
+            btn.textContent = "Turn on"
+        }
+
+
+        else{
+         img1.src="img bulb/turn on.jpg"
+        }
+
+       }
+    </script>
+
+</body>
+</html>
